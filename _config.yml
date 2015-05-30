@@ -29,8 +29,8 @@ fonts:
   main: '"Roboto Condensed", sans-serif,,Helvetica,Arial,sans-serif'
   
 formats:
-  lxHive: '<span class="lxHive"><strong>lx</strong>Hive</span>'
-  lxHive-hl: '<span class="light">lx</span>Hive'
+  lxHive: '<span class="lxHive inline">lx<strong>Hive</strong></span>'
+  lxHive-hl: '<span class="lxHive hl"><span class="light">lx</span>Hive</span>'
 
 # Footer settings
 footer: Brightcookie Pty Ltd

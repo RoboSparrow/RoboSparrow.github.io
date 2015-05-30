@@ -427,7 +427,7 @@ body {
 
 /* lxHive text formatting */
 .lxHive{
-    color: {{ site.color.primary }};
+    text-transform: none;
 }
 
 /* downloads */
@@ -455,4 +455,12 @@ body {
 .intro-body  a.brightcookie:focus {
     border: none;
 }
+
+
+@media(max-width:767px) {
+.brand-heading img{
+     max-width: 200px;
+}
+}
+
 /* nav */
