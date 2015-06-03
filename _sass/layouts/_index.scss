@@ -40,3 +40,10 @@
   padding: $padding-small $padding-large 0 $padding-large;
   text-align: center;
 }
+
+
+// home
+.home .call-out small{
+    font-size: 70%; 
+    color: $text-color-inverse;
+}
