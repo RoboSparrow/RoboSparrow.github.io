@@ -445,6 +445,11 @@ body {
     color: {{ site.color.body-bg }};
     border-color: {{ site.color.body-bg }};
 }
+.intro-body a.btn-circle:hover,
+.intro-body a.btn-circle:focus {
+    color: {{ site.color.body-bg }};
+}
+
 .intro-body img.brightcookie-logo{
     max-height: 45px;
 }
@@ -466,4 +471,8 @@ body {
 }
 }
 
-/* nav */
+/* footer */
+footer small{
+    font-size: 0.6em;
+    opacity: .7;
+}
