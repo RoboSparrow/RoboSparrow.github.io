@@ -1,52 +1,73 @@
-# Site settings
-title: lxHive - a fast and lightweight open source xAPI LRS
-email: support@brightcookie.com.au
-url: http://localhost:4000
-description: "lxHive is a fast and lightweight open source xAPI conformant Learning Record Store (LRS). lxHive logs and returns activity statements as defined in the Experience API specification."
+# SITE CONFIGURATION
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://example.com" # the base hostname & protocol for your site
 
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary: 'rgb(255, 164, 0)'
-  primary-bg: 'rgb(255, 164, 0)'
-  body: 'rgb(85, 86, 90)'
-  body-bg: 'rgb(255, 255, 255)'
-  white-alpha-3: 'rgba(255,255,255,.3)'
-  white-alpha-1: 'rgba(255,255,255,.1)'
-  links: 'rgba(0, 131, 215, 1)'
-  links-hover: 'rgba(0, 131, 215, .5)'
-  selection: '#fcfcfc'
-  light-grey: '#f3f3f3'
+# THEME-SPECIFIC CONFIGURATION
+theme:
+  # Meta
+  title: "RoboSparrow"
+  avatar: avatar.png
+  gravatar: # Email MD5 hash
+  description: "RoboSparrow's pursue for crumbs. A website with blog posts and pages" # used by search engines
+
+  # Header and footer text
+  header_text: >
+     <p><img src="/img/robosparrow.jpg" height="250"></p>
+     <p>RoboSparrow's pursue for crumbs.</p>
+  header_text_feature_image:
+  footer_text: >
+   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
+
+  # Icons
+  rss: false
+  email_address: # Full email address, e.g. "sam@example.com"
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr: "https://www.flickr.com/photos/_-_oe_-_/"
+  github: "https://github.com/RoboSparrow"
+  google_plus: "https://plus.google.com/100846454403797627551"
+  instagram:
+  linkedin:  # Full URL
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:  # Full URL
+  steam:
+  tumblr:
+  twitter: "twitter"
+  wordpress:
+  youtube:
+
+  # Scripts
+  google_analytics: "UA-831210-2"
+  disqus_shortname:
+  katex: true # Enable if using math markup
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "Follow RSS feed"
+  str_email: "Email"
+  str_next: "Next"
+  str_prev: "Prev"
+  str_continue_reading: "Continue reading"
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+
+  google_fonts: "Ubuntu:400,500"
   
-  #primary: '#000000'
-  #primary-bg: '#000000'
-  #white-alpha-3: 'rgba(255,255,255,.3)'
-  #white-alpha-1: 'rgba(255,255,255,.1)'
-  #links: '#219ab3'
-  #links-hover: '#11505d'
-  #selection: '#fcfcfc'
+  # Post navigation
+  post_navigation: false
 
-fonts:
-  main: '"Roboto Condensed", sans-serif,,Helvetica,Arial,sans-serif'
-  
-formats:
-  lxHive: '<span class="lxHive inline">lx<strong>Hive</strong></span>'
-  lxHive-hl: '<span class="lxHive hl"><span class="light">lx</span>Hive</span>'
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
 
-# Footer settings
-footer: Brightcookie Pty Ltd
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: 'Issues'
-    url: https://github.com/Brightcookie/lxHive/issues
-    icon: '<i class="fa fa-github"></i>'
-  - title: Email
-    url: 'mailto: supprt@brightcookie.com.au'
-    'icon': '<i class="fa fa-envelope"></i>'
-  - title: facebook
-    url: https://www.facebook.com/lxhive
-    icon: '<i class="fa fa-facebook-square"></i>'
-    
-# Build settings
+# BUILD SETTINGS
 markdown: kramdown
-permalink: pretty
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: :compressed

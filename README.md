@@ -1,7 +1,14 @@
+# Type Theme
 
-lxHive Github project page
-==========================
+![Default Type Theme blog](https://cloud.githubusercontent.com/assets/816965/5142407/19742e48-71d6-11e4-8d9d-fdfe010784f0.png)
 
-Based on @jeromelachaud's excellent Jekyll version of the [Grayscale bootstrap theme ](http://ironsummitmedia.github.io/startbootstrap-grayscale/)
+A free and open-source [Jekyll](http://jekyllrb.com) theme. Great for blogs and easy to customize.
 
-* https://github.com/jeromelachaud/grayscale-theme
+## Get Started
+
+[Demo](https://rohanchandra.github.io/type-theme/)
+
+[Using Type](https://rohanchandra.github.io/project/type/)
+
+## License
+The MIT License (MIT)
