@@ -41,3 +41,10 @@ foreach($query->posts as $post_id){
     echo $post_id.'<br>';
 }
 ```
+
+Alternatively you could query the database yourself using [$wpdb](https://codex.wordpress.org/Class_Reference/wpdb#SELECT_a_Column).
+Here an example without a JOIN to $wpdb->posts for filter status and type):
+
+```
+$wpdb->get_col( "SELECT post_id, meta_key, meta_value FROM $wpdb->postmeta where meta_key = 'my_meta_field'");
+```
