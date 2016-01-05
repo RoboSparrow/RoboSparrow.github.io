@@ -1,1 +1,43 @@
 /* */
+
+#FlickrPublicPhotos .item{
+    display: inline-block;
+    margin: 0.5em;
+    transform: scale(0);
+    transition: transform 2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+#FlickrPublicPhotos figure{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#FlickrPublicPhotos figure figcaption{
+    position: absolute;
+    background: rgba(0,0,0,0.75);
+    width: 100%;
+    max-height: 70%;
+    overflow: hidden;
+    overflow-y: auto;
+    color: white;
+    padding: .5em;
+
+    opacity: 0;
+    bottom: 500px;
+    transition: all 0.6s ease;
+}
+#FlickrPublicPhotos figure:hover figcaption{
+  opacity: 1;
+  bottom: 0;
+}
+
+#FlickrPublicPhotos .item.loaded{
+    transform: scale(1);
+}
+
+#FlickrPublicPhotos figcaption .line{
+    display: block;
+}

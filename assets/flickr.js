@@ -1,87 +1,133 @@
-(function(){
+/* jshint es3: true */
 
-   //// Exposing the username and password here is only for demonstration
-   //// and of course extremely unsafe.
-   ///// In production mode hide this in a cookie or a middleware
-   var FlickrApi = function(userId){
+// @TODO: gonna clean this up!
+(function(window, document){
+    'use strict';
 
-        var config = {
-            userId: '26912394@N00'
-        };
+    var FlickrApi = {
 
-        var url = function(endpoint, args) {
+        tags: function(tags, tagString){
+            var _tags = tagString.split(' ');
+            for(var i = 0; i < _tags.length; i++){
+                if(tags.indexOf(_tags[i]) < 0){
+                    tags.push(_tags[i]);
+                }
+            }
+            return tags;
+        },
+
+        url: function(endpoint, args) {
             var query = [];
             for(var key in args){
                 query.push(encodeURIComponent(key) + "=" + encodeURIComponent(args[key]));
             }
             return (query.length) ? endpoint + '?' + query.join("&") : url;
-        };
+        },
 
-        var request = function(endpoint, query, onSuccess, onError){
-
-            var result;
-
+        jsonp: function(endpoint, query, callback){
             query = query || {};
             query.format = 'json';
+            query.jsoncallback = callback;
+            var script= document.createElement('script');
+            script.src = FlickrApi.url(endpoint, query);
+            document.head.appendChild(script);
+        },
 
-            onSuccess = onSuccess || function(){};
-            onError =  onError || function(){};
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', url(endpoint, query));
-            xhr.setRequestHeader('Accept', '*/*');
-            xhr.setRequestHeader('Content-Type', 'application/json');
-
-            xhr.onreadystatechange = function(){
-                if (xhr.readyState === 4){
-                    if(xhr.status === 200){
-                        try{
-                            result = JSON.parse(xhr.responseText);console.log(response.statements.length);
-                            onSuccess(result);
-                        }catch(e){
-                            console.error(e.message);
-                            onError(e.message);
-                        }
-                    }else{
-                        var msg = 'XHR response error' + xhr.status + ': ' + xhr.responseText;
-                        console.error(msg);
-                        onError(msg);
-                    }
-                }
-            };
-            xhr.send();
-        };
-
-        var Get = {
-            photosPublic: function(query, onSuccess, onError){
-                query = query || {};
-                query.id = config.userId;
-                request('https://api.flickr.com/services/feeds/photos_public.gne', query, onSuccess, onError);
+        getAuthor: function(str){
+            var regExp = /\(([^)]+)\)/;
+            var matches = regExp.exec(str);
+            if(matches && matches.length > 0){
+                return matches[1];
             }
-        };
+            return str;
+        },
 
-        return {
-            Get: Get,
-            request:request
-        };
-   };
+        PhotosPublic: {
+            render: function(json){
 
-    document.addEventListener('DOMContentLoaded', function() {
-        if(document.getElementById('FlickrPublicPhotos')){
-            FlickrApi().Get.photosPublic(null, function(json){
-                var html = ['<ul>'];
-                for(var i = 0; i < json.items.length; i++){
-                    html.push('<li>');
-                    html.push('<a href="'+ json.items[i].link +'" target="_blank">');
-                    html.push('<img src="' + json.items[i].media + '" titl ="'+ json.items[i].title +' alt="'+ json.items[i].title +'">');
-                    html.push('</a>');
-                    html.push('</li>');
+                if(!document.getElementById('FlickrPublicPhotos')){
+                    return;
                 }
-                html.push('</ul>');
-                document.getElementById('FlickrPublicPhotos').innerHTML = html.join("\n");
-            });
+                var tags = [];
+
+                var renderImg = function(node, item){
+                    var image = new Image();
+                    image.src = item.media.m;
+                    image.onload = function(){
+                        var html = [];
+                        html.push('<figure>');
+                        html.push('<a href="'+ item.link +'" target="_blank">');
+                        html.push('<img src="' + this.src + '" alt="'+ item.title +'">');
+                        html.push('</a>');
+
+                        html.push('<figcaption>');
+                        if(item.title){
+                            html.push('<span class="line">' + item.title + '</span>');
+                        }
+                        html.push('<small class="line"><u>by:</u> ' + FlickrApi.getAuthor(item.author) + '</small>');
+                        if(item.tags){
+                            html.push('<small class="line"><u>tags:</u> ' + item.tags + '</small>');
+                        }
+                        html.push('</figcaption>');
+                        html.push('</figure>');
+                        node.innerHTML = html.join("\n");
+                        node.className += ' loaded';
+
+                    };
+                };
+
+                var tagEvents = function(element){
+                    element.addEventListener('change', function(e) {
+                        e.preventDefault();
+                        var tag = e.target.value;
+                        var nodes = document.querySelectorAll('.flickr-gallery .item');
+                        for(var i = 0; i < nodes.length; i++){
+                            if(tag === '<all>'){
+                                nodes[i].style.display = 'inline-block';
+                                continue;
+                            }
+                            if(nodes[i].dataset.tags && nodes[i].dataset.tags.indexOf(tag) > -1){
+                                nodes[i].style.display = 'inline-block';
+                                continue;
+                            }
+                            nodes[i].style.display = 'none';
+                        }
+                    }, false);
+                };
+
+                var wrapper = document.createElement('ul');
+                wrapper.className = 'flickr-gallery';
+                document.getElementById('FlickrPublicPhotos').appendChild(wrapper);
+
+                for(var i = 0; i < json.items.length; i++){
+                    var node =  document.createElement('li');
+                    node.className = 'item';
+                    if(json.items[i].tags){
+                        tags = FlickrApi.tags(tags, json.items[i].tags);
+                        node.dataset.tags = json.items[i].tags;
+                    }
+                    wrapper.appendChild(node);
+                    renderImg(node, json.items[i]);
+                }
+
+                var tagSelector = document.createElement('select');
+                tagSelector.innerHTML += '<option value="<all>">Any tag</option>';
+                for(var k = 0; k < tags.length; k++){
+                    tagSelector.innerHTML += '<option value="' + tags[k] + '">' + tags[k] + '</option>';
+                }
+                tagEvents(tagSelector);
+                wrapper.parentNode.insertBefore(tagSelector, wrapper.parentNode.firstChild);
+            },
+
+            get: function(query, callback){
+                query = query || {};
+                FlickrApi.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', query, callback);
+            }
         }
-    });
 
+    };
 
-}());
+    window.FlickrApi = FlickrApi;
+    window.FlickrApi.PhotosPublic.get({id: '26912394@N00'}, 'FlickrApi.PhotosPublic.render');
+
+}(window, document));
