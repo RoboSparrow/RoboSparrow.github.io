@@ -97,6 +97,7 @@
 
                 var wrapper = document.createElement('ul');
                 wrapper.className = 'flickr-gallery';
+                document.getElementById('FlickrPublicPhotos').innerHTML = null;
                 document.getElementById('FlickrPublicPhotos').appendChild(wrapper);
 
                 for(var i = 0; i < json.items.length; i++){
