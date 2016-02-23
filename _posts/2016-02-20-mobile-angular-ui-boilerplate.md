@@ -35,10 +35,8 @@ $ cordova create <appname>
 
 ```
 $ cordova platform
-
 Installed platforms:
 Available platforms: amazon-fireos, android, blackberry10, browser, firefoxos, ubuntu, webos
-
 $ cordova platform add android
 $ cordova platform add browser
 ```
