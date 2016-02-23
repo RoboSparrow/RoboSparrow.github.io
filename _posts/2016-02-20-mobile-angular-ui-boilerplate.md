@@ -3,7 +3,7 @@ layout: post
 title: Mobile Angular UI Boilerplate setup (from scratch)
 ---
 
-[http://mobileangularui.com/](Mobile Angular UI) is a great project, combining Cordova and Angular in a hands-on Boilerplate.
+[Mobile Angular UI](http://mobileangularui.com/) is a great project, combining Cordova and Angular in a hands-on Boilerplate.
 
 Quick notes for  an install from scratch (Ubuntu):
 
