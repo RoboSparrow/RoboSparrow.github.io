@@ -3,18 +3,20 @@ layout: post
 title: Mobile Angular UI Boilerplate setup (from scratch)
 ---
 
-[http://mobileangularui.com/](Mobile Angular UI) is a great project, which combines Cordova and Angular in a hands-on Boilerplate.
+[http://mobileangularui.com/](Mobile Angular UI) is a great project, combining Cordova and Angular in a hands-on Boilerplate.
 
 Quick notes for  an install from scratch (Ubuntu):
 
 Prerequisites
 
- * node and npm alredy installed
+ * node and npm already installed
 
 1. Install Cordova
 
 ```
 $ sudo npm install -g cordova.
+$ cordova -v
+6.0.0
 ```
 
 2. Install mobile-angular-ui & Yeoman
