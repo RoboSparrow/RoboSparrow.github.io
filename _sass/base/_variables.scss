@@ -1,3 +1,6 @@
+// grey: rgb(107, 114, 109)
+// yellow: rgb(251, 193, 4)
+
 // Typography
 $font-family-main: Ubuntu, Helvetica, Arial, serif;
 $font-family-headings: Ubuntu, Helvetica, Arial, sans-serif;
@@ -14,18 +17,18 @@ $background-color: #fff;
 $border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
 
 // Typography colours
-$text-color: #383838;
+$text-color: #505552;
 $text-color-inverse: #d7d7d7;
 $link-color: #005782;
 $selection-color: #D4D4D4; // visible when highlighting text
 
 // Header colours
-$header-link-color: #383838;
+$header-link-color: #505552;
 
 // Feature image for articles
 $feature-image-text-color: #fff;
 $feature-image-size: cover; // options include "cover", "contain", "auto"
 
 // Header description box
-$header-desc-background-color: #383838;
-$header-desc-text-color: #FFF;
+$header-desc-background-color: #fdda68;
+$header-desc-text-color: #505552;

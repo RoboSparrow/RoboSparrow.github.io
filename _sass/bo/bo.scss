@@ -12,3 +12,13 @@ code{
 .post-teaser h1{
     font-size: 1.5em;
 }
+
+.site-header{
+    border-bottom-color: white;
+}
+.not-front .site-header{
+    background-color: $header-desc-background-color;
+}
+.site-header.has-feature-image{
+    background-color: white;
+}
