@@ -20,3 +20,31 @@ Array.prototype.forEach.call(elements, function(element) {
      element.parentNode.insertBefore(katexElement, element);
   }
 });
+
+
+(function(window){
+    'use strict';
+
+    // @sse https://developer.mozilla.org/en/docs/Web/API/Element/classList
+    if (!("classList" in document.createElement("_"))) {
+        return;
+    }
+
+    var header = document.querySelector('.site-header');
+    header.classList.add('js-scroll');
+
+    var limit = header.offsetHeight;
+    document.querySelector('.content').style.paddingTop = limit + 'px';
+
+    window.addEventListener('scroll', function(e){
+
+        var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrolled > limit) {
+            header.classList.add('js-shrink');
+        } else {
+            header.classList.remove('js-shrink');
+        }
+    });
+
+}(window));
