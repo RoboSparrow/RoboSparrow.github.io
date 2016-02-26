@@ -14,8 +14,7 @@ code{
 }
 
 .site-header{
-    border-bottom-color: white;
-
+    border-bottom: none;
 }
 
 .not-front .site-header{
@@ -25,9 +24,11 @@ code{
     background-color: white;
 }
 
+//@see main js
 .site-header.js-scroll{
     position: fixed;
     transition: padding 1s;
+    z-index: 50;
 }
 .site-header.js-shrink{
     padding-top: 1%;
