@@ -11,8 +11,16 @@
         {% endif %}
         <h1 class="site-title">
             <a href="{{ site.baseurl }}/">{{ site.theme.title }}</a>
+
+            
         </h1>
     </div>
+    
+    <input type="checkbox" id="hamburger"/>
+    <label class="hamburger-icon" for="hamburger">
+        <i class="fa fa-bars"></i>
+    </label>
+    
     <nav class="site-nav">
         <ul>
             {% for page in site.pages %}
