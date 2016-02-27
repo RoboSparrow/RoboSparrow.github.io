@@ -17,16 +17,20 @@
 }
 // Buttons
 .button {
-  border-radius: 0.3em;
+  border-radius: 0.2em;
   border: 1px solid;
   display: inline-block;
   margin: 1em 0;
-  padding: 0.5em 0.75em;
-}
-a.button:hover {
+  padding: 0.35em 0.5em;
   background: $link-color;
   border: 1px solid $link-color;
   color: $background-color;
+  font-size: .8em;
+}
+a.button:hover {
+  background: $background-color;
+  border: 1px solid $link-color;
+  color: $link-color;
   text-decoration: none;
 }
 // States

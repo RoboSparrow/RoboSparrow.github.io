@@ -27,11 +27,12 @@ code{
 //@see main js
 .site-header.js-scroll{
     position: fixed;
-    transition: padding 1s;
+    transition: padding 1s, background-color .5s;
     z-index: 50;
 }
 .site-header.js-shrink{
     padding-top: 1%;
     padding-bottom: 1%;
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.35);
+    background-color: #ffffff;
 }
