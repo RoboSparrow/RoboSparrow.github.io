@@ -23,7 +23,7 @@ theme:
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "sam@example.com"
   behance:
   bitbucket:
   dribbble:
@@ -46,7 +46,7 @@ theme:
   # Scripts
   google_analytics: "UA-831210-5"
   disqus_shortname:
-  katex: true # Enable if using math markup
+  katex: false # Enable if using math markup
 
   # Localization strings
   str_follow_on: "Follow on"

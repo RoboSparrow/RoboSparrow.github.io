@@ -1,0 +1,53 @@
+---
+---
+
+// Base
+@import 'base/variables';
+
+.form .row{
+    margin-bottom: 1em;
+}
+.form .row label{
+    display: block;
+    margin-bottom: .5em;
+}
+.form label sup{
+    color: $error-color;
+}
+.form fieldset{
+    border: none;
+    padding: 1em;
+}
+.form input[type=text]{
+    border: 1px solid $text-color;
+    width: 50%;
+    background: transparent;
+}
+.form .subject{
+    display: none;
+}
+.form textarea{
+    border: 1px solid $text-color;
+    width: 50%;
+    min-height: 5em;
+    background: transparent;
+}
+
+#log{
+}
+
+#Log .entry{
+    margin-bottom: .5em;
+    padding: .5em;
+    background-color: lighten($header-desc-background-color, 20%);
+}
+
+#Log .success{
+    background-color: lighten($success-color, 30%);
+}
+
+#Log .error{
+    background-color: lighten($error-color, 30%);
+}
+
+
