@@ -3,7 +3,7 @@
     'use strict';
     
     //// scroll header
-    // @sse https://developer.mozilla.org/en/docs/Web/API/Element/classList
+    // @see https://developer.mozilla.org/en/docs/Web/API/Element/classList
     if (!("classList" in document.createElement("_"))) {
         return;
     }
@@ -15,9 +15,7 @@
     document.querySelector('.content').style.paddingTop = limit + 'px';
 
     window.addEventListener('scroll', function(e){
-
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-
         if (scrolled > limit) {
             header.classList.add('js-shrink');
         } else {
