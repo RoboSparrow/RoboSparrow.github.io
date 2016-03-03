@@ -68,6 +68,7 @@
     var onSuccess = function(){
         var node = document.createElement('p');
         node.innerHTML = '<a href="' + window.location.href +'">Send another message</a>';
+        nodes.form.parentNode.insertBefore(node, nodes.form);
         removeForm();
     };
     
