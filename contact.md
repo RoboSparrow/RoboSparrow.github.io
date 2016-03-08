@@ -10,7 +10,7 @@ css:
  - css/contact.css
 ---
 
-You can leave a message here. Please include your contact details.
+You can leave a message. Please include your contact details.
 
 <div id="Log"></div>
 <form id="ContactForm" class="form">
@@ -24,14 +24,14 @@ You can leave a message here. Please include your contact details.
             <label for="contact-subject">Subject<sup>*</sup></label>
             <input type="text" name="contact-subject">
         </div>
-        
+
         <div class="row message">
             <label for="contact[message]">Message<sup>*</sup></label>
             <textarea name="contact[message]"></textarea>
         </div>
-        
+
         <div class="row submit">
-            <button type="submit">Submit</button>
+            <button type="submit" class="button">Send <i class="fa fa-rocket"></i></button>
         </div>
     </fieldset>
 </form>
