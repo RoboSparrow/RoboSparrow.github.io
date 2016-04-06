@@ -28,12 +28,15 @@ $ sudo npm install -g bower yo gulp generator-mobileangularui
 3. Create Cordova project
 
 ```
-$ cordova create <appname>
+$ cordova create <app-name>
+# Alternatively use extended cpommand:
+# $ cordova create <app-folder> <app-domain-id> <app-display-title>
 ```
 
 4. Setup Cordova platform support for your App
 
 ```
+$ cd <app-folder>
 $ cordova platform
 Installed platforms:
 Available platforms: amazon-fireos, android, blackberry10, browser, firefoxos, ubuntu, webos
@@ -51,7 +54,7 @@ $ cordova platform add browser
 5. Merge Mobile Angular UI project boilerplate
 
 ```
-cd <appname>
+cd <app-folder>
 yo mobileangularui
 ```
 
