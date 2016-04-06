@@ -29,7 +29,10 @@ $ sudo npm install -g bower yo gulp generator-mobileangularui
 
 ```
 $ cordova create <app-name>
-# Alternatively use extended cpommand:
+```
+Alternatively use extended command:
+
+```
 # $ cordova create <app-folder> <app-domain-id> <app-display-title>
 ```
 
