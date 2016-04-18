@@ -24,9 +24,12 @@
     font-weight: bold;
     font-size: 1em;
     line-height: 1.5;
+    @media (max-width: 1100px) {
+        display: none;
+    }
   }
 
-    
+
   .site-nav {
     ul {
       margin: 0;
@@ -51,7 +54,7 @@
     #hamburger,
     .hamburger-icon {
         display: none;
-    } 
+    }
     .hamburger-icon{
         float: right;
     }
