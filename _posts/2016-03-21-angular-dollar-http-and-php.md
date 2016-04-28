@@ -3,7 +3,7 @@ layout: post
 title: "Quick note: Processing data with Angular's $http and PHP"
 ---
 
-This might be really basic but I found myself stumbling over this repeatedly. Writing down helps.
+This might be really basic but I found myself stumbling over this repeatedly. Writing it down may help.
 
 Angular's [$http service](https://docs.angularjs.org/api/ng/service/$http) sends data *by default* as `application/json` header
 
