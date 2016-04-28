@@ -8,6 +8,7 @@ If you are as impatient as me then your app might still showing up as `HelloCord
 Updating your config is apparently not enough because your platform builds still contain references to the old app meta data.
 
 Example ios:
+
 ![Alt text](/img/posts/hello-cordova-ios-folder.png)
 
 The solution is to rebuild each platform via `cordova platform remove <platform>` and `cordova platform add <platform>`.
