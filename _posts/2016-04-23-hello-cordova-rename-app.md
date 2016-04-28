@@ -27,4 +27,6 @@ After this:
 * you might need to rebuild your app icons and splash screens
 * re-import your project in `xcode` (if ios)
 
+Tools:
+
 * [cordova-icon])(https://github.com/AlexDisler/cordova-icon)
