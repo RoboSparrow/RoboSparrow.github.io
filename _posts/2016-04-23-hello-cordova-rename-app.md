@@ -7,7 +7,7 @@ So you developed your app and neglected your **config.xml**?
 If you are as impatient as me then your app might still showing up as `HelloCordova` on your devices and sims.
 Updating your config is apparently not enough because your platform builds still contain references to the old app meta data.
 
-Example ios:
+Example for ios - spot the culprits!
 
 ![Alt text](/img/posts/hello-cordova-ios-folder.png)
 
@@ -28,6 +28,6 @@ After this:
 * you might need to rebuild your app icons and splash screens
 * re-import your project in `xcode` (if ios)
 
-Tools:
+Links:
 
-* [cordova-icon])(https://github.com/AlexDisler/cordova-icon)
+* [cordova-icon](https://github.com/AlexDisler/cordova-icon)
