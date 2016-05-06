@@ -4,7 +4,7 @@ title: "Quick note: HelloCordova - rename your app"
 ---
 
 So you developed your app and neglected your **config.xml**?
-If you are as impatient as me then your app might still showing up as `HelloCordova` on your devices and sims.
+If you are as impatient as me then your app might still showing up as `HelloCordova` on your devices/emulators.
 Updating your config is apparently not enough because your platform builds still contain references to the old app meta data.
 
 Example for ios - spot the culprits!
