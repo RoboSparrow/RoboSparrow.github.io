@@ -15,6 +15,9 @@ The solution is to rebuild each platform via `cordova platform remove <platform>
 You should do this generally after every significant change in your **config.xml**.
 
 ```
+#list
+cordova platform ls
+...
 # remove
 cordova platform remove ios
 cordova platform remove android
