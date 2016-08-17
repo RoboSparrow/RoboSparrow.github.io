@@ -36,10 +36,10 @@ Output:
 $ sh test.sh
 
 * Folder: /www/lxHive/.git
-* Branch: bugfix-statement-filtering
+* Branch: development
 * Status:
 
-# On branch bugfix-statement-filtering
+# On branch development
 nothing to commit (working directory clean)
 ```
 
@@ -52,5 +52,5 @@ Notes:
 
 Links:
 
-* https://rietta.com/blog/2014/02/16/get-and-compare-the-current-git-branch-in-bash/
-* http://stackoverflow.com/a/1386350
+* <https://rietta.com/blog/2014/02/16/get-and-compare-the-current-git-branch-in-bash/>
+* <http://stackoverflow.com/a/1386350>
