@@ -6,7 +6,7 @@ flickr:
   id: "26912394@N00"
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
+theme_settings:
   # Meta
   title: "RoboSparrow"
   avatar: avatar.png
@@ -14,9 +14,8 @@ theme:
   description: "RoboSparrow's pursue for crumbs. A website with blog posts and pages" # used by search engines
 
   # Header and footer text
-  header_text: >
-     <p><img src="/img/robosparrow.jpg" height="250"></p>
-     <p>RoboSparrow's pursue for crumbs.</p>
+  header_text: true
+
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -70,7 +69,9 @@ paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
