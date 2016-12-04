@@ -23,7 +23,7 @@ As you can see from the quote this is not an issue but a slighty annoying securi
 
 Links:
 
-* Galluim OS community: https://www.reddit.com/r/GalliumOS/
-* Gallium OS Inststall Wiki: https://wiki.galliumos.org/Installing
-* Chrx: https://github.com/reynhout/chrx
+* [Galluim OS community (reddit)](https://www.reddit.com/r/GalliumOS/)
+* [Gallium OS Inststall (Wiki)](Wiki: https://wiki.galliumos.org/Installing)
+* [Chrx (github)](https://github.com/reynhout/chrx)
 
