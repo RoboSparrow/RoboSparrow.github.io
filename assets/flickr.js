@@ -32,7 +32,8 @@
             script.src = FlickrApi.url(endpoint, query);
             document.head.appendChild(script);
         },
-
+        
+        // strip flickr author format, e.g. `nobody@flickr.com (<username>)`
         getAuthor: function(str){
             var regExp = /\(([^)]+)\)/;
             var matches = regExp.exec(str);
@@ -64,7 +65,7 @@
                         if(item.title){
                             html.push('<span class="line">' + item.title + '</span>');
                         }
-                        html.push('<small class="line"><u>by:</u> ' + FlickrApi.getAuthor(item.author) + '</small>');
+                        //html.push('<small class="line"><u>by:</u> ' + FlickrApi.getAuthor(item.author) + '</small>');
                         if(item.tags){
                             html.push('<small class="line"><u>tags:</u> ' + item.tags + '</small>');
                         }
