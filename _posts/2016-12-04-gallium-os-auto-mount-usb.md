@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "GalliumOS Chrx - Enable automount for USB sticks"
+title: "Dualboot GalliumOS on your Chromebook - Enable automount for USB sticks"
 ---
 
 ![Alt text](/img/posts/gallium-os.png)
 
-[GalliumOS](https://galliumos.org/) is a great Xubuntu-based distro for Chromebooks. I recomend installing it with [chrx](https://github.com/reynhout/chrx) dualboot (follow readme step-bystep)
+[GalliumOS](https://galliumos.org/) is a great Xubuntu-based distro for Chromebooks. I recommend installing it with [chrx](https://github.com/reynhout/chrx) with the dualboot option (follow readme step-bystep)
 
 * On powering up your Chromebook (developer mode sceen) can switch with `CTRl+D` to Chrome or `CTRL+` to Gallium
 
