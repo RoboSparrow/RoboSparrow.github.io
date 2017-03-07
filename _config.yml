@@ -43,6 +43,7 @@ theme_settings:
 
   # Scripts
   google_analytics: "UA-831210-5"
+  google_webmaster: "9oMJJsG7ypjWvdxvpc-UnDLiqT822k3nKQmD9oO1qZs"
   disqus_shortname:
   katex: false # Enable if using math markup
 
