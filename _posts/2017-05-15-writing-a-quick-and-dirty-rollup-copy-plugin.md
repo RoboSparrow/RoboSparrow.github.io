@@ -15,7 +15,7 @@ Here an example of a simple "Copy file A to B" plugin.
 
 <script src="https://gist.github.com/RoboSparrow/13ec07f68d76ca25777eca74c3598ff5.js"></script>
 
-In this case I just copy a static js file from ./node_modules to dist, without worriying about dependedency injection.  (The js creates a global)
+In this case I just copy a static js (which creates a global object) file from ./node_modules to my dist folder.
 
 ---
 
