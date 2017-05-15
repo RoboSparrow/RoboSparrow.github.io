@@ -20,3 +20,15 @@ php wp-cli.phar core install --url=example.com --title=Example --admin_user=supe
 ```
 
 **Boom!**
+
+## Installing plugins
+
+## search plugin
+
+```bash
+## search plugin database
+php wp-cli.phar plugin search 'contact form 7'
+## check displayed search results and use the slug for the plugin you want to install
+php wp-cli.phar plugin install contact-form-7 --activate
+## done!
+```
