@@ -7,9 +7,9 @@ title: Writing a really quick and dirty rollup.js copy plugin
 And Rollup bundles into clean and readable code. (I am looking at you, Webpack!)
 
 Writing rollup plugins sounds far more taunting as it is. A plugin boils down to just a function which returns an object.
-With a few lines you can create a simple plugin inside your rollup.js
+So, with a few lines you can create a simple plugin inside your rollup.js. 
 
-The only challenge is is to hook your task into the right [supported plugin properties](https://github.com/rollup/rollup/wiki/Plugins#creating-plugins) callback.
+The only challenge is to hook your task into the right [supported plugin properties](https://github.com/rollup/rollup/wiki/Plugins#creating-plugins) callback.
 
 Here an example of a simple "Copy file A to B" plugin.
 
