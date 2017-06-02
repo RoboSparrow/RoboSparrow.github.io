@@ -123,7 +123,7 @@
 
             get: function(query, callback){
                 query = query || {};
-                FlickrApi.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', query, callback);
+                FlickrApi.jsonp('https://api.flickr.com/services/feeds/photos_public.gne', query, callback);
             }
         }
 
