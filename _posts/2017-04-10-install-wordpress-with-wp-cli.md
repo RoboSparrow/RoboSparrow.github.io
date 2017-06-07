@@ -5,6 +5,7 @@ title: Install Wordpress using wp-cli
 
 Installing Wordpress with [wp-cli](http://wp-cli.org/) is a huge time-saver.
 
+## Core
 
 ```bash
 ## 0. create project folder
@@ -21,9 +22,7 @@ php wp-cli.phar core install --url=example.com --title=Example --admin_user=supe
 
 **Boom!**
 
-## Installing plugins
-
-## search plugin
+## Plugins
 
 ```bash
 ## search plugin database
@@ -31,4 +30,14 @@ php wp-cli.phar plugin search 'contact form 7'
 ## check displayed search results and use the slug for the plugin you want to install
 php wp-cli.phar plugin install contact-form-7 --activate
 ## done!
+```
+
+## Upgrade (basic)
+
+```bash
+## core to latest stable release
+php wp-cli.phar core update
+## all plugins
+plugin plugin update-all
+
 ```
