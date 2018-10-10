@@ -15,7 +15,7 @@ I won't go into details, because they are neither related to this topic nor to t
 
 So we need to replace occurences of `Brightcookie` with `G3 International`. This mainly affects mainly documentation and license headers inside hundreds of code files. The approach is (as often) a mix of individual review and low-level automation.
 
-** Notes**
+**Notes**
 
 The search and replace queries int this example are case case insensitive.
 
