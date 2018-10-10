@@ -3,7 +3,9 @@ layout: post
 title: Workflow for recursive search/replace in a PHP project
 ---
 
-*Use case**
+Quick notes of how to recusively replace strings in a php project.
+
+**Use case**
 
 Our Open Source xAPI LRS [lxHive](https://github.com/Brightcookie/lxHive) changes ownership from Brightcookie to G3 International.
 This sounds a bit more dramatic than it actually is. The team behind lxHive stays the same, only the organisation changes.
