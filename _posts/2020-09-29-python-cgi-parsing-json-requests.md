@@ -106,4 +106,10 @@ if not query_string:
 query = parse_qs(query_string)
 print('test: ', query['test'][0])
 
+#> method:  POST
+#> header[X-Marvin-Status]:  depressed
+#> query:  test=1
+#> json:  {'username': 'xyz', 'password': 42}
+#> test:  1
+
 ```
