@@ -59,7 +59,7 @@ The clear **disadvantage** is here that you have to typecast your data propertie
  - on client, when encoding the data
  - on server, when processing the params
 
- ## Solution 2: parse request manually
+## Solution 2: parse request manually
 
 Read the raw request body directly and parse query with [urllib](https://docs.python.org/3/library/urllib.parse.html)
 
