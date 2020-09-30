@@ -10,8 +10,9 @@ request
 
 ```bash
 curl \
-    --header "Content-Type: application/json" \
     --request POST \
+    --header "Content-Type: application/json" \
+    --header "X-Marvin-Status: depressed" \
     --data '{"name": "Deep Thought", "answer": 42}' \
     http://raspberrypi.local:9000/hitchhiker/api/ultimate-question.py?test=1
 ```
@@ -35,8 +36,9 @@ request
 
 ```bash
 curl \
-    --header "Content-Type: application/x-www-form-urlencoded" \
     --request POST \
+    --header "Content-Type: application/x-www-form-urlencoded" \
+    --header "X-Marvin-Status: depressed" \
     --data 'name=Deep Thought&answer=42' \
     http://raspberrypi.local:9000/hitchhiker/api/ultimate-question.py?test=1
 ```
@@ -67,8 +69,9 @@ request
 
 ```bash
 curl \
-    --header "Content-Type: application/json" \
     --request POST \
+    --header "Content-Type: application/json" \
+    --header "X-Marvin-Status: depressed" \
     --data '{"name": "Deep Thought", "answer": 42}' \
     http://raspberrypi.local:9000/hitchhiker/api/ultimate-question.py?test=1
 ```
@@ -84,23 +87,23 @@ import json
 
 from urllib.parse import parse_qs
 
-content_len = int(os.environ['CONTENT_LENGTH'])
-
-body = sys.stdin.read(content_len)
-res = json.loads(body)
+content_len = os.environ.get('CONTENT_LENGTH', '0')
+method = os.environ.get('REQUEST_METHOD', '')
 query_string = os.environ.get('QUERY_STRING', '')
+x_header = os.environ.get('HTTP_X_MARVIN_STATUS', '')
 
+body = sys.stdin.read(int(content_len))
+res = json.loads(body)
+
+print('method: ', method)
+print('header[X-Marvin-Status]: ', x_header)
+print('query: ', query_string)
 print('json: ', res)
-print('query: ', query_string )
 
 if not query_string:
     exit()
 
 query = parse_qs(query_string)
 print('test: ', query['test'][0])
-
-#> json:  {'name': 'Deep Thought', 'answer': 42}
-#> query:  test=1
-#> test:  1
 
 ```
