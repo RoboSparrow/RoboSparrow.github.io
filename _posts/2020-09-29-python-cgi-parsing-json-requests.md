@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CGI: Parsing JSON data requests with Python
+title: CGI - Parsing JSON data requests with Python
 ---
 
 Python's core [cgi module](https://docs.python.org/3/library/cgi.html) is a great helper for slim rest apis
