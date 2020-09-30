@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: CGI: Parsing JSON data requests with Python
