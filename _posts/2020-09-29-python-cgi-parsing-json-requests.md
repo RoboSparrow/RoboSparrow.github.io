@@ -3,7 +3,7 @@ layout: post
 title: CGI - Parsing JSON data requests with Python
 ---
 
-Python's core [cgi module](https://docs.python.org/3/library/cgi.html) is a great helper for slim rest apis
+Python's core [cgi module](https://docs.python.org/3/library/cgi.html) is a great helper for slim rest apis.
 Unfortunately field parsing with `cgi.FieldStorage()` does not support JSON data requests and will raise a TypeError.
 
 request
